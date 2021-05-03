@@ -12,7 +12,7 @@ Jackson Databind
 
 ## Docker-compose
 
-Primeiramente execute o arquivo docker compose na sua máquina e garanta que o zookeer e o kafka estejam sendo executados, dando o comando 
+Primeiramente execute o arquivo docker compose na sua máquina e garanta que o zookeeper e o kafka estejam sendo executados, dando o comando 
 
 ```docker
 sudo docker-compose up
