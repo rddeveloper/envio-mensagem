@@ -15,7 +15,7 @@ Jackson Databind
 Primeiramente execute o arquivo docker compose na sua máquina e garanta que o zookeeper e o kafka estejam sendo executados, dando o comando 
 
 ```docker
-sudo docker-compose up
+sudo docker-compose up -d
 ```
 o arquivo se encontra no diretorio /docker.
 
