@@ -1,4 +1,4 @@
-# Envio de Mensagem
+# Envio de Mensagens
 
 Projeto criado utilizando o java e o apache kafka, cujo o objetivo é simular um producer de envio de mensagens.
 
@@ -53,11 +53,11 @@ public static void main(String args []) throws InterruptedException {
 o método esta com o while(true) assim sendo enviado n mensagems com um thread sleep de 200 e simulando o envio de mensagem em tempo real
 ```Java
   while (true) {
-                Mensagem mensagem = gerarMensagem();
-                ProducerRecord<String, Mensagem> producerRecord = new ProducerRecord<String, Mensagem>("mensagem-envio", mensagem);
-                producer.send(producerRecord);
-                Thread.sleep(200);
-            }
+    Mensagem mensagem = gerarMensagem();
+    ProducerRecord<String, Mensagem> producerRecord = new ProducerRecord<String, Mensagem>("mensagem-envio", mensagem);
+    producer.send(producerRecord);
+    Thread.sleep(200);
+  }
 ```
 
 ## Dicas Extras
