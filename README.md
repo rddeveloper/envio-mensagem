@@ -15,14 +15,14 @@ Jackson Databind
 Primeiramente execute o arquivo docker compose na sua máquina e garanta que o zookeeper e o kafka estejam sendo executados, dando o comando 
 
 ```docker
-sudo docker-compose up -d
+docker-compose up -d
 ```
 o arquivo se encontra no diretorio /docker.
 
 para verificar se as instâncias dos containers fora executados e estão levantadas, execute o comando
 
 ```docker
-sudo docker ps -a
+docker ps -a
 ```
 
 ## Criação do Tópico
@@ -30,13 +30,13 @@ sudo docker ps -a
 Execute o comando para criação do tópico na sua máquina
 
 ```docker
-sudo docker-compose exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --create --topic mensagem-envio
+docker-compose exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --create --topic mensagem-envio
 ```
 
 Confirme se o tópico foi criado com sucesso
 
 ```docker
-sudo docker-compose exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --list
+docker-compose exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 ## JAVA
 Com o kafka rodando na sua máquina, basta executar a classe com o método principal da classe ProcucerMensagem dentro do package service para que a instancia e as configurações do kafka sejam criadas e processadas, e o producer de mensagem seja executado.
@@ -61,8 +61,9 @@ o método esta com o while(true) assim sendo enviado n mensagems com um thread s
 ```
 
 ## Dicas Extras
+Para quem usa Linux e precisa de permissão de administrador, coloque o sudo no começo de cada comando referente ao docker ou docker-compose.\
 Caso queira dar um stop nos containers rodando do docker na sua máquina, execute:
 
 ```docker
-sudo docker stop $(sudo docker ps -aq)
+docker stop $(docker ps -aq)
 ```
